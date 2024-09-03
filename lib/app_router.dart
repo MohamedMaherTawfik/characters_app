@@ -1,4 +1,4 @@
-import 'package:bloc_start/buisness_logic_layer/cubit/characters_cubit.dart';
+import 'package:bloc_start/buisness_layer/cubit/characters_cubit.dart';
 import 'package:bloc_start/constants/strings.dart';
 import 'package:bloc_start/data/repository/characters_repository.dart';
 import 'package:bloc_start/data/web_services/character_web_services.dart';
