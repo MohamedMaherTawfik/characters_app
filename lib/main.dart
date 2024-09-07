@@ -2,6 +2,7 @@ import 'package:bloc_start/app_router.dart';
 import 'package:flutter/material.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(RickAndMorty(
     appRouter: AppRouter(),
   ));

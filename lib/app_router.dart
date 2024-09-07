@@ -12,8 +12,7 @@ class AppRouter {
   late CharactersCubit charactersCubit;
 
   AppRouter() {
-    charactersRepository =
-        CharactersRepository(charactersWebServices: CharactersWebServices());
+    charactersRepository = CharactersRepository(CharactersWebServices());
     charactersCubit = CharactersCubit(charactersRepository);
   }
 
