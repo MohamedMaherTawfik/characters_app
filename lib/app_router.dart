@@ -1,5 +1,6 @@
 import 'package:bloc_start/buisness_layer/cubit/characters_cubit.dart';
 import 'package:bloc_start/constants/strings.dart';
+import 'package:bloc_start/data/models/characters.dart';
 import 'package:bloc_start/data/repository/characters_repository.dart';
 import 'package:bloc_start/data/web_services/character_web_services.dart';
 import 'package:bloc_start/presentation/screens/characters_details.dart';
@@ -27,7 +28,11 @@ class AppRouter {
         );
 
       case characterDetailScreen:
-        return MaterialPageRoute(builder: (_) => CharacterDetailsScreen());
+        final character = settings.arguments as Character;
+        return MaterialPageRoute(
+            builder: (_) => CharacterDetailsScreen(
+                  character: character,
+                ));
     }
   }
 }

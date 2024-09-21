@@ -149,7 +149,7 @@ class _CharactersScreenState extends State<CharactersScreen> {
   Widget buildAppBarTitle() {
     return Text(
       'Characters',
-      style: TextStyle(color: MyColors.myGrey),
+      style: TextStyle(color: MyColors.myGrey, fontWeight: FontWeight.bold),
     );
   }
 
@@ -166,7 +166,11 @@ class _CharactersScreenState extends State<CharactersScreen> {
                   },
                   color: MyColors.myGrey,
                 )
-              : Container(),
+              : Container(
+                  child: IconButton(
+                      onPressed: () {},
+                      icon: Icon(Icons.brightness_4_outlined)),
+                ),
           backgroundColor: MyColors.myYellow,
           title: _isSearching ? _buildSearchField() : buildAppBarTitle(),
           actions: _buildAppBarActions(),
